@@ -11,7 +11,7 @@ irradiaciones_sistemas = {
     "Fijo":       pd.read_excel(archivo_irr, usecols=["GHI_corr_fijo"])["GHI_corr_fijo"].values.flatten()
 }
 
-# --- Temperatura de la celda (igual para todos los sistemas) ---
+# --- Temperatura de la celda  ---
 ruta_temp_pv = r"D:\Datos_python\temperatura_celda.csv"
 temp_pv = pd.read_csv(ruta_temp_pv)["Temperatura_celda"].values.flatten()
 
@@ -129,3 +129,4 @@ for sistema in irradiaciones_sistemas.keys():
     print(f"  Tensión máxima (V): {V_max:.2f}")
     print(f"  Potencia máxima (W): {P_max:.2f}")
     print(f"  Corriente máxima (A): {I_max:.2f}")
+
